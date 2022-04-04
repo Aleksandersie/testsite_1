@@ -491,8 +491,10 @@ font-stretch: normal;
     padding-left: 33px;
     padding-right: 33px;
     background-color: @lightRed;
+    border-radius: 5px;
   &:hover{
-    color: @blackText;
+    background-color: @grayText;
+    transform: scale(1.02);
   }
 }
 .prod_flex{
@@ -748,6 +750,7 @@ font-stretch: normal;
   text-decoration: none;
   &:hover{
     background-color: @grayText;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   }
 }
 .right{
@@ -814,7 +817,12 @@ font-stretch: normal;
     top: 50px;
     display: none;
     left: -50px;
-    
+    &_center{
+      left: -250px;
+    }
+    &_right{
+      left: -450px;
+    }
 }
 
 .drop_menu {
@@ -928,6 +936,11 @@ font-stretch: normal;
   text-align: left;
   color: @grayText;
   text-decoration: none;
+  display: block;
+  &:hover{
+    color: @blackText;
+    transform: scale(1.03);
+  }
 }
 .footer_stripe{
   min-width: 1140px;
@@ -950,6 +963,24 @@ font-stretch: normal;
   margin-left: 8px;
   border-radius: 3px;
 }
+.social_ref{
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 5px;
+  background-color: white;
+  margin-right: 5px;
+}
+.social_ref_color{
+  color: @grayText;
+  padding: 6px;
+  &:hover{
+    color: @lightRed;
+    transform: scale(1.05);
+  }
+}
+
 .footer_stripe_left{
   font-family: Lato;
   font-size: 16px;
@@ -960,4 +991,17 @@ font-stretch: normal;
   letter-spacing: 0.4px;
   text-align: right;
   color: @grayText;
+}
+
+//Product page
+
+.new_arrivals{
+  height: 148px;
+  background-color: @grayText;
+}
+.arrivals_flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
